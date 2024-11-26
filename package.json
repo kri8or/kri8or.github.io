@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css",
-    "start": "concurrently \"npm run build:css -- --watch\" \"hugo server --navigateToChanged\""
+    "watch:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css --watch",
+    "start": "concurrently \"npm run watch:css\" \"hugo server --navigateToChanged\""
   },
   "keywords": [],
   "author": "",
