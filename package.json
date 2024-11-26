@@ -1,0 +1,22 @@
+{
+  "name": "polishlessons-hugo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css",
+    "start": "concurrently \"npm run build:css -- --watch\" \"hugo server --navigateToChanged\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.15"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

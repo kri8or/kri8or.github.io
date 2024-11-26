@@ -2,3 +2,10 @@ baseURL = 'https://polishlessonsamsterdam.com'
 languageCode = 'en-us'
 title = 'Polish lessons Amsterdam'
 theme = "polish-davmar"
+
+[build]
+  writeStats = true
+
+[mediaTypes]
+  [mediaTypes."text/css"]
+  suffixes = ["css"]
