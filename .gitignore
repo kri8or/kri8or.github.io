@@ -33,3 +33,5 @@ hugo.toml.lock
 .vscode/
 *.swp
 
+
+hugo_stats.json
