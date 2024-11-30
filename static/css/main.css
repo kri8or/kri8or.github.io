@@ -502,14 +502,29 @@ video {
 .absolute {
   position: absolute;
 }
-.left-2 {
-  left: 0.5rem;
+.relative {
+  position: relative;
 }
-.right-2 {
-  right: 0.5rem;
+.bottom-4 {
+  bottom: 1rem;
+}
+.left-0 {
+  left: 0px;
+}
+.right-0 {
+  right: 0px;
+}
+.right-4 {
+  right: 1rem;
 }
 .top-10 {
   top: 2.5rem;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-50 {
+  z-index: 50;
 }
 .mb-20 {
   margin-bottom: 5rem;
@@ -525,6 +540,9 @@ video {
 }
 .hidden {
   display: none;
+}
+.w-44 {
+  width: 11rem;
 }
 .w-full {
   width: 100%;
@@ -544,21 +562,38 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
-.rounded-lg {
-  border-radius: 0.5rem;
+.rounded-full {
+  border-radius: 9999px;
 }
 .rounded-sm {
   border-radius: 0.125rem;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-orange-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(253 186 116 / var(--tw-border-opacity, 1));
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -571,6 +606,10 @@ video {
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity, 1));
 }
 .bg-opacity-85 {
   --tw-bg-opacity: 0.85;
@@ -601,13 +640,13 @@ video {
 .font-bold {
   font-weight: 700;
 }
-.text-slate-400 {
+.text-orange-300 {
   --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+  color: rgb(253 186 116 / var(--tw-text-opacity, 1));
 }
-.text-white {
+.text-slate-600 {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(71 85 105 / var(--tw-text-opacity, 1));
 }
 .duration-150 {
   transition-duration: 150ms;
@@ -615,8 +654,6 @@ video {
 .duration-200 {
   transition-duration: 200ms;
 }
-
-
 
 /* HAMBURGER MENU */
 
@@ -635,11 +672,12 @@ video {
     position: absolute;
     width: 24px;
     height: 2px;
-    top: 2px;
+    top: 4px;
     left: 0;
-    background: white;
     transform: rotate(0);
     transition: all 0.5s;
+    --tw-bg-opacity: 1;
+    background-color: rgb(253 186 116 / var(--tw-bg-opacity, 1));
   }
   
   .hamburger-middle {
@@ -676,6 +714,28 @@ video {
   outline-offset: 2px;
 }
   
+  .group:hover .group-hover\:fill-current {
+  fill: currentColor;
+}
+  
+  .dark\:block:is(.dark *) {
+  display: block;
+}
+  
+  .dark\:hidden:is(.dark *) {
+  display: none;
+}
+  
+  .dark\:bg-slate-900:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+}
+  
+  .dark\:text-slate-300:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
+}
+  
   @media (min-width: 768px) {
 
   .md\:top-14 {
@@ -690,6 +750,22 @@ video {
     display: none;
   }
 
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
   .md\:p-4 {
     padding: 1rem;
   }
@@ -700,4 +776,3 @@ video {
   }
 }
 
-  
