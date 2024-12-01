@@ -3,12 +3,15 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="dark">
+<body class="dark relative">
   <header>
     {{ partial "navbar.html" . }}
-    {{ partial "draft_dev.html" . }}
   </header>
   <main>
+    {{ partial "draft_dev.html" . }}
+    
+    {{ partial "testimonials.html" . }}
+
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
