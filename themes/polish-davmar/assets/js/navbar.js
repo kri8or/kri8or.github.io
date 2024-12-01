@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const moon = document.getElementById('moon')
     const sun = document.getElementById('sun')
     const body = document.body;
+    const whatsapp = document.getElementById('whatsapp')
+
+
+    whatsapp.addEventListener('click', function(){
+        alert('haha')
+    })
 
     btn.addEventListener('click', navToggle)
 

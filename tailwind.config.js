@@ -7,9 +7,14 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        mateDark: 'hsl(260, 8%, 14%) '
+      }
+    },
     fontFamily: {
       cata: ['Catamaran', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif']
     },
   },
   plugins: [],
