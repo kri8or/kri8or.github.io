@@ -13,8 +13,9 @@ module.exports = {
       }
     },
     fontFamily: {
-      cata: ['Catamaran', 'sans-serif'],
-      poppins: ['Poppins', 'sans-serif']
+      cata: ['Catamaran', 'Poppins'],
+      poppins: ['Poppins', 'Parkinsans'],
+      parki: ['Parkinsans', 'sans-serif']
     },
   },
   plugins: [],
