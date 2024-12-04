@@ -1,12 +1,14 @@
 <!-- hero container with image -->
-<div id="hero">
+<div id="hero" style="background-image: url('/images/{{ .Site.Params.mainphoto }}'); background-repeat: no-repeat; background-size: cover;">
     <div id="hero-content">
       <div class="container mx-auto text-slate-300">
   
         <!-- nav -->
         <nav class="flex px-2 md:p-4">
  
-          <h1 class="text-xl text-orange-500 font-bold md:text-3xl">Polish Lessons Amstedam</h1>
+          <h1 class="text-xl text-orange-500 font-bold md:text-3xl">
+            {{ .Site.Title }}
+          </h1>
         </nav>
   
         <!-- geral abaixo nav -->
@@ -14,28 +16,15 @@
   
             <!-- left content -->
             <div class="md:w-[55%] lg:w-[65%] flex flex-col space-y-10 md:space-y-20 justify-center p-6 md:p-0">
-              <!-- service 1 -->
-              <div class="">
-                <h1 class="text-xl md:text-3xl text-[antiquewhite] font-parki font-b">Bilingual upbringing</h1>
-                <p class="text-sm md:leading-8 tracking-wide md:text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Harum sint vel quidem non dolore aperiam nostrum, 
-                  rerum ullam perspiciatis ipsum dolor sit amet consectetur adipisicing elit. 
-                  Harum sint vel quidem non dolore aperiam nostrum, 
-                  rerum ullam perspiciatis 
-                  <span class="text-orange-300 text-opacity-75 font-bold hover:cursor-pointer hover:text-opacity-100 duration-150">discover more ></span>
-                </p>
-              </div>
-               <!-- service 2 -->
-              <div class="">
-                <h1 class="text-xl md:text-3xl text-[antiquewhite] font-parki">Polish Lessons</h1>
-                <p class="text-sm md:leading-8 tracking-wide md:text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Harum sint vel quidem non dolore aperiam nostrum, 
-                  rerum ullam perspiciatis ipsum dolor sit amet consectetur adipisicing elit. 
-                  Harum sint vel quidem non dolore aperiam nostrum, 
-                  rerum ullam perspiciatis 
-                  <span class="text-orange-300 text-opacity-75 font-bold hover:cursor-pointer hover:text-opacity-100 duration-150">read more ></span>
-                </p>
-              </div>
+              
+              {{ range .Site.Params.Services.items }}
+                <div class="">
+                  <h1 class="text-xl md:text-3xl text-[antiquewhite] font-parki font-b">{{ .name }}</h1>
+                  <p class="text-sm md:leading-8 tracking-wide md:text-lg text-white">{{ .description }}
+                    <a class="text-orange-300 text-opacity-75 font-bold hover:cursor-pointer hover:text-opacity-100 duration-150" href="{{ .url }}">{{ .urltext }}</a>
+                  </p>
+                </div>
+              {{ end }} 
              
             </div>
   
@@ -50,70 +39,45 @@
                     <div class="overflow-hidden rounded-full w-28 md:w-32 h-28 md:h-32 border-2 border-black">
                       <img 
                         class="w-full h-full object-cover transform transition-transform duration-200 hover:scale-110" 
-                        src="{{ (resources.Get "images/monika-small.jpg").RelPermalink }}" 
+                        src="images/{{ .Site.Params.Aboutme.photo }}" 
                         alt="profile">
                     </div>
-                    <h1 class="text-lg">Monika</h1>
+                    <h1 class="text-lg">{{ .Site.Params.Aboutme.name }}</h1>
                   </div>
                   <!-- right -->
                   <div class="flex flex-col space-y-4">
                       
-                      <!-- qualif -->
-                      <div class="">
-                        <div class="flex items-center space-x-2">
-                          <svg class="w-[25px] h-[25px] fill-[antiquewhite] stroke-gray-700"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                          width="800px" height="800px" viewBox="0 0 31.771 31.771"
-                          xml:space="preserve">
-                            <g>
-                              <g>
-                                <path d="M31.771,20.319c0-0.474-0.279-0.87-0.676-1.066V11.9c0.09-0.034,0.146-0.119,0.145-0.214c0-0.095-0.062-0.179-0.149-0.21
-                                  L15.92,6.125c-0.194-0.069-0.406-0.069-0.601,0L0.15,11.477c-0.089,0.031-0.149,0.115-0.15,0.21s0.056,0.18,0.144,0.214
-                                  l15.148,5.896c0.211,0.081,0.444,0.081,0.655,0l14.102-5.492v6.947c-0.396,0.195-0.675,0.594-0.675,1.065
-                                  c0,0.492,0.3,0.919,0.729,1.102c-0.429,0.847-0.729,2.585-0.729,3.081c0,0.661,0.537,1.197,1.198,1.197
-                                  c0.66,0,1.197-0.536,1.197-1.197c0-0.496-0.301-2.234-0.729-3.081C31.47,21.238,31.771,20.811,31.771,20.319z"/>
-                                <path d="M4.888,14.87c0.001,1.696,0.002,3.692,0.002,4.009c0,3.158,4.753,5.729,10.73,5.89c5.976-0.161,10.729-2.729,10.729-5.89
-                                  c0-0.315,0-2.312,0.002-4.009l-10.406,4.051c-0.211,0.082-0.444,0.082-0.655,0L4.888,14.87z"/>
-                              </g>
-                            </g>
-                          </svg>
-                          <h2 class="font-bold">       
-                            Qualifications
-                          </h2>
-                        </div>
-                          
-                          <!-- bullets qualification -->
-                          <div class="">
-                            <p class="text-sm">Masters in this</p>
-                            <p class="text-sm">Masters in that</p>
-                          </div>
+                    {{ range .Site.Params.Aboutme.items }}
+
+                    <div class="">
+                      <div class="flex items-center space-x-2">
+                        {{ .icon | safeHTML }}
+                        <h2 class="font-bold">       
+                          {{ .item }}
+                        </h2>
                       </div>
-                      
-                      <div class="">
-                        <div class="flex items-center space-x-2">
-                          <svg class="w-[25px] h-[25px] fill-[antiquewhite] stroke-gray-700" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 21H6.2C5.0799 21 4.51984 21 4.09202 20.782C3.71569 20.5903 3.40973 20.2843 3.21799 19.908C3 19.4802 3 18.9201 3 17.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M7 3V5M17 3V5M3 9H21M13.5 13.0001L7 13M10 17.0001L7 17M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                          <h2 class="font-bold">       
-                            Experience
-                          </h2>
+                        
+                        <!-- bullets qualification -->
+                        <div class="">
+                          {{ range .subitems }}
+                          <p class="text-sm">{{ .subitem }}</p>
+                          {{ end }}
                         </div>
-                        <ul class="">
-                          <li class="text-sm">experience in this</li>
-                          <li class="text-sm">20 years experience in  that</li>
-                        </ul>
-                      
-                      </div>
+                    </div>
+                    {{ end }}
                   </div>
                 </div>
     
                 <!-- bottom description-->
-                <p class="text-xs md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia accusamus atque necessitatibus provident placeat explicabo sequi ipsa exercitationem error quo, consequatur dicta, magni illo dolorum ducimus repudiandae nesciunt ut quidem.</p>
+                <p class="text-xs md:text-lg">
+                  {{ .Site.Params.Aboutme.description }}
+                </p>
                 
                 <!-- buttom contact -->
                 <div class="flex w-full justify-center">
-                  <button class="bg-orange-400 py-2 px-6 text-black font-bold shadow-lg rounded-sm max-w-xs w-full hover:bg-opacity-100 hover:text-white duration-150" type="button">
-                    Contact me
-                  </button>
+                  <a class="bg-orange-400 py-2 px-6 text-black font-bold shadow-lg rounded-sm max-w-xs w-full hover:bg-opacity-100 hover:text-white duration-150 text-center" href="{{ .Site.Params.Aboutme.urlbutton }}">
+                    {{ .Site.Params.Aboutme.textbutton }}
+                  </a>
                 </div>
                
               </div>
