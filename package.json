@@ -5,7 +5,7 @@
   "scripts": {
     "build:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css",
     "watch:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css --watch",
-    "start": "concurrently \"npm run watch:css\" \"hugo server --navigateToChanged\""
+    "start": "concurrently \"npm run watch:css\" \"hugo server --bind 0.0.0.0 --navigateToChanged\""
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
-    "tailwindcss": "^3.4.15"
+    "tailwindcss": "^3.4.16"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

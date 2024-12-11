@@ -1,4 +1,4 @@
-# baseURL = 'https://example.org/'
+baseURL = 'https://polishlessonsamsterdam.com'
 # languageCode = 'en-US'
 # title = 'My New Hugo Site'
 
@@ -41,3 +41,5 @@ params = { active = 1 }
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+

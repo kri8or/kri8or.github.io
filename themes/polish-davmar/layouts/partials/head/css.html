@@ -1,5 +1,6 @@
 {{- if eq hugo.Environment "development" }}
   <link rel="stylesheet" href="/css/main.css">
 {{- else }}
-  <link rel="stylesheet" href="/css/main.css" integrity="{{ . | fingerprint }}" crossorigin="anonymous">
+  {{ $css := resources.Get "css/main.css" }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css | fingerprint }}" crossorigin="anonymous">
 {{- end }}
