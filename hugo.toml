@@ -30,7 +30,11 @@ theme = "polish-davmar"
     photosmall = "monika-small.jpg"
     photo = "monika.jpg"
     title = "Language Coach"
-    iconqualifications = '''<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.771 31.771" xml:space="preserve" style="width: 45px; height: 45px; fill: #f97316; stroke: #4b5563; stroke-width: 1;">
+   
+    [[params.Aboutme.mainitem]]
+    title = "MA in Linguistics"
+    description = "My thesis focused on being bilingual and the effects it has on one's pronunciation"
+    icon = '''<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.771 31.771" xml:space="preserve" style="width: 45px; height: 45px; fill: antiquewhite; stroke: #4b5563; stroke-width: 1;">
             <g>
               <g>
                 <path d="M31.771,20.319c0-0.474-0.279-0.87-0.676-1.066V11.9c0.09-0.034,0.146-0.119,0.145-0.214c0-0.095-0.062-0.179-0.149-0.21L15.92,6.125c-0.194-0.069-0.406-0.069-0.601,0L0.15,11.477c-0.089,0.031-0.149,0.115-0.15,0.21s0.056,0.18,0.144,0.214l15.148,5.896c0.211,0.081,0.444,0.081,0.655,0l14.102-5.492v6.947c-0.396,0.195-0.675,0.594-0.675,1.065c0,0.492,0.3,0.919,0.729,1.102c-0.429,0.847-0.729,2.585-0.729,3.081c0,0.661,0.537,1.197,1.198,1.197c0.66,0,1.197-0.536,1.197-1.197c0-0.496-0.301-2.234-0.729-3.081C31.47,21.238,31.771,20.811,31.771,20.319z"/>
@@ -39,12 +43,29 @@ theme = "polish-davmar"
             </g>
           </svg>
           '''
-    iconexperience = '''<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 45px; height: 45px; fill: antiquewhite; stroke: #4b5563; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;">
+
+    [[params.Aboutme.mainitem]]
+    title = "16 years of experience"
+    description = "My thesis focused on being bilingual and the effects it has on one's pronunciation"
+    icon = '''<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 45px; height: 45px; fill: antiquewhite; stroke: #4b5563; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;">
                         <path d="M10 21H6.2C5.0799 21 4.51984 21 4.09202 20.782C3.71569 20.5903 3.40973 20.2843 3.21799 19.908C3 19.4802 3 18.9201 3 17.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M7 3V5M17 3V5M3 9H21M13.5 13.0001L7 13M10 17.0001L7 17M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"/>
                       </svg>
                       '''
+
+    [[params.Aboutme.mainitem]]
+    title = "Speech therapy"
+    description = "My thesis focused on being bilingual and the effects it has on one's pronunciation"
+    icon = '''<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.771 31.771" xml:space="preserve" style="width: 45px; height: 45px; fill: antiquewhite; stroke: #4b5563; stroke-width: 1;">
+            <g>
+              <g>
+                <path d="M31.771,20.319c0-0.474-0.279-0.87-0.676-1.066V11.9c0.09-0.034,0.146-0.119,0.145-0.214c0-0.095-0.062-0.179-0.149-0.21L15.92,6.125c-0.194-0.069-0.406-0.069-0.601,0L0.15,11.477c-0.089,0.031-0.149,0.115-0.15,0.21s0.056,0.18,0.144,0.214l15.148,5.896c0.211,0.081,0.444,0.081,0.655,0l14.102-5.492v6.947c-0.396,0.195-0.675,0.594-0.675,1.065c0,0.492,0.3,0.919,0.729,1.102c-0.429,0.847-0.729,2.585-0.729,3.081c0,0.661,0.537,1.197,1.198,1.197c0.66,0,1.197-0.536,1.197-1.197c0-0.496-0.301-2.234-0.729-3.081C31.47,21.238,31.771,20.811,31.771,20.319z"/>
+                <path d="M4.888,14.87c0.001,1.696,0.002,3.692,0.002,4.009c0,3.158,4.753,5.729,10.73,5.89c5.976-0.161,10.729-2.729,10.729-5.89c0-0.315,0-2.312,0.002-4.009l-10.406,4.051c-0.211,0.082-0.444,0.082-0.655,0L4.888,14.87z"/>
+              </g>
+            </g>
+          </svg>
+          '''
     
-    [[params.Aboutme.items]]
+    [[params.Aboutme.headeritem]]
     item = "Qualifications"
     icon = '''<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.771 31.771" xml:space="preserve" style="width: 25px; height: 25px; fill: antiquewhite; stroke: #4b5563; stroke-width: 1;">
             <g>
@@ -55,20 +76,20 @@ theme = "polish-davmar"
             </g>
           </svg>
           '''
-      [[params.Aboutme.items.subitems]]
+      [[params.Aboutme.headeritem.subitems]]
       subitem = 'masters in this'
-      [[params.Aboutme.items.subitems]]
+      [[params.Aboutme.headeritem.subitems]]
       subitem = 'masters in that'
 
-    [[params.Aboutme.items]]
+    [[params.Aboutme.headeritem]]
     item = "Experience"
     icon = '''<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 25px; height: 25px; fill: antiquewhite; stroke: #4b5563; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;">
                 <path d="M10 21H6.2C5.0799 21 4.51984 21 4.09202 20.782C3.71569 20.5903 3.40973 20.2843 3.21799 19.908C3 19.4802 3 18.9201 3 17.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M7 3V5M17 3V5M3 9H21M13.5 13.0001L7 13M10 17.0001L7 17M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"/>
               </svg>
             '''
-      [[params.Aboutme.items.subitems]]
+      [[params.Aboutme.headeritem.subitems]]
       subitem = 'masters in this 1'
-      [[params.Aboutme.items.subitems]]
+      [[params.Aboutme.headeritem.subitems]]
       subitem = 'masters in that 2'
 
 
