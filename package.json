@@ -5,7 +5,7 @@
   "scripts": {
     "build:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css",
     "watch:css": "postcss themes/polish-davmar/assets/css/main.css -o static/css/main.css --watch",
-    "start": "concurrently \"npm run watch:css\" \"hugo server --bind 0.0.0.0 --navigateToChanged\""
+    "start": "concurrently \"npm run watch:css\" \"hugo server --bind 0.0.0.0 --navigateToChanged --disableFastRender\""
   },
   "keywords": [],
   "author": "",
