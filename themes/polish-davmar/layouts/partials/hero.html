@@ -1,5 +1,5 @@
 <!-- hero container with image -->
-<div id="hero" style="background-image: url('/images/{{ .Site.Params.mainphoto }}'); background-repeat: no-repeat; background-size: cover;">
+<div id="hero" style="background-image: url('/images/{{ .Site.Params.mainphoto }}'); background-repeat: no-repeat; background-size: cover; min-height: 120vh; min-height: 700px;">
   
     <div id="hero-content">
       <div class="container mx-auto text-slate-300">
@@ -7,7 +7,7 @@
         <!-- nav -->
         <nav class="flex px-2 md:p-4">
  
-          <h1 class="text-xl text-orange-500 font-bold md:text-3xl">
+          <h1 class="text-xl text-yellow-500 font-bold md:text-3xl">
             {{ .Site.Title }}
           </h1>
         </nav>
@@ -22,7 +22,7 @@
                 <div class="">
                   <h1 class="text-xl md:text-3xl text-[antiquewhite] font-parki font-b">{{ .name }}</h1>
                   <p class="text-sm md:leading-8 tracking-wide md:text-lg text-white">{{ .description }}
-                    <a class="text-orange-300 text-opacity-75 font-bold hover:cursor-pointer hover:text-opacity-100 duration-150" href="{{ .url }}">{{ .urltext }}</a>
+                    <a class="text-[#ffb403] text-opacity-75 font-bold hover:cursor-pointer hover:text-opacity-100 duration-150" href="{{ .url }}">{{ .urltext }}</a>
                   </p>
                 </div>
               {{ end }} 
@@ -76,7 +76,7 @@
                 
                 <!-- buttom contact -->
                 <div class="flex w-full justify-center">
-                  <a class="bg-orange-400 py-2 px-6 text-black font-bold shadow-lg rounded-sm max-w-xs w-full hover:bg-opacity-100 hover:text-white duration-150 text-center" href="{{ .Site.Params.Aboutme.urlbutton }}">
+                  <a class="bg-[#ffb403] py-2 px-6 text-black font-bold shadow-lg rounded-sm max-w-xs w-full hover:bg-opacity-100 hover:text-white duration-150 text-center" href="{{ .Site.Params.Aboutme.urlbutton }}">
                     {{ .Site.Params.Aboutme.textbutton }}
                   </a>
                 </div>
