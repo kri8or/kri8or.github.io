@@ -1,6 +1,6 @@
 baseURL = 'https://polishlessonsamsterdam.com'
 languageCode = 'en-us'
-title = 'Polish lessons Amsterdam'
+title = 'Polish Lessons Amsterdam'
 theme = "polish-davmar"
 
 [params]
