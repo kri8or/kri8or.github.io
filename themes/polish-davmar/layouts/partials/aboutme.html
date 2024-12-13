@@ -1,56 +1,59 @@
-<section id="about" class="p-10 md:p-16 font-parki bg-white">
+<section id="about" class=" font-parki bg-white">
+    <div class="container mx-auto p-10 md:p-16">
+        <h1 class="text-4xl text-black font-bold text-center pb-6">About Me</h1>
 
-    <h1 class="text-4xl text-black font-bold text-center pb-6">About Me</h1>
-
-    <div class="flex flex-col md:flex-row md:space-x-6">
-
-        <!-- left side - pic -->
-        <div class="md:max-w-[20%] mb-6">
-            <!-- photo -->
-            <div class="md:hidden overflow-hidden rounded-full w-28 md:w-32 h-28 md:h-32 shadow-lg border m-auto">    
-                <img 
-                class="w-full h-full" 
-                src="images/{{ .Site.Params.Aboutme.photosmall }}" 
-                alt="profile">              
+        <div class="flex flex-col md:flex-row md:space-x-6">
+    
+            <!-- left side - pic -->
+            <div class="md:max-w-[20%] mb-6">
+                <!-- photo -->
+                <div class="md:hidden overflow-hidden rounded-full w-28 md:w-32 h-28 md:h-32 shadow-lg border m-auto">    
+                    <img 
+                    class="w-full h-full" 
+                    src="images/{{ .Site.Params.Aboutme.photosmall }}" 
+                    alt="profile">              
+                </div>
+                <!-- name and title -->
+                <div class="md:hidden w-full text-center">
+                    <h1 class="text-lg font-semibold">{{ .Site.Params.Aboutme.name }}</h1>
+                    <h1 class="text-sm">{{ .Site.Params.Aboutme.title }}</h1>
+                </div>        
+    
+                <div class="hidden md:block shadow-xl">
+                    <img class="rounded-xl" src="images/{{ .Site.Params.Aboutme.photo }}" alt="profile" alt="">
+                </div>
+                <!-- name and title -->
+                <div class="w-full text-left hidden md:block p-2 px-4">
+                    <h1 class="text-lg font-semibold">{{ .Site.Params.Aboutme.name }}</h1>
+                    <h1 class="text-sm">{{ .Site.Params.Aboutme.title }}</h1>
+                </div> 
             </div>
-            <!-- name and title -->
-            <div class="md:hidden w-full text-center">
-                <h1 class="text-lg font-semibold">{{ .Site.Params.Aboutme.name }}</h1>
-                <h1 class="text-sm">{{ .Site.Params.Aboutme.title }}</h1>
-            </div>        
-
-            <div class="hidden md:block shadow-xl">
-                <img class="rounded-xl" src="images/{{ .Site.Params.Aboutme.photo }}" alt="profile" alt="">
+            
+            <!-- right side  -->
+            <div class="">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
+                  
+                    <!-- card -->
+                    {{ range .Site.Params.Aboutme.mainitem }}
+                    
+                    <div class="flex flex-col p-3 space-y-2 mx-6 md:mx-0">
+                        <div class="flex flex-row space-x-4 items-center">
+                            {{ .icon | safeHTML  }}
+                            <h1 class="text-xl font-semibold text-mateDark">{{ .title }}</h1>
+                        </div>
+                        <p class="text-left text-sm">
+                            {{ .description }}
+                        </p>
+                   </div> 
+                   {{ end }}
+                            
+                                    
+                </div>
             </div>
-            <!-- name and title -->
-            <div class="w-full text-left hidden md:block p-2 px-4">
-                <h1 class="text-lg font-semibold">{{ .Site.Params.Aboutme.name }}</h1>
-                <h1 class="text-sm">{{ .Site.Params.Aboutme.title }}</h1>
-            </div> 
+    
         </div>
-        
-        <!-- right side  -->
-        <div class="">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
-              
-                <!-- card -->
-                {{ range .Site.Params.Aboutme.mainitem }}
-                
-                <div class="flex flex-col p-3 space-y-2 mx-6 md:mx-0">
-                    <div class="flex flex-row space-x-4 items-center">
-                        {{ .icon | safeHTML  }}
-                        <h1 class="text-xl font-semibold text-mateDark">{{ .title }}</h1>
-                    </div>
-                    <p class="text-left text-sm">
-                        {{ .description }}
-                    </p>
-               </div> 
-               {{ end }}
-                        
-                                
-            </div>
-        </div>
-
     </div>
+
+   
 
 </section>
