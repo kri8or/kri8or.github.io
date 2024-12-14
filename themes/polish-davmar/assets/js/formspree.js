@@ -2,28 +2,47 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // get the form elements defined in your form HTML above
     
-    var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
+    const form = document.getElementById("contact-form");
+    const button = document.getElementById("submit_button");
+
+    const button_text = document.getElementById("button_text");
+    const spinner = document.getElementById("spinner")
+    const checkmark= document.getElementById("checkmark")
+    const cross= document.getElementById("cross")
 
     // Success and Error functions for after the form is submitted
     
     function success() {
       form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      button.disabled = false;
+      button.classList.toggle("submitted");
+      spinner.classList.toggle("hidden");
+      checkmark.classList.toggle("hidden");
+      button_text.textContent = 'Thank you!';
     }
 
     function error() {
-      status.innerHTML = "Oops! There was a problem.";
+      button.classList.toggle("submitted");
+      cross.classList.toggle("hidden");
+      spinner.classList.toggle("hidden");
+      button_text.textContent = "There was a problem";
+    }
+
+    function sending(){
+      button_text.textContent = 'sending';
+      button.classList.toggle("submitted");
+      spinner.classList.toggle("hidden");
+      button.disabled = true;
     }
 
     // handle the form submission event
 
     form.addEventListener("submit", function(ev) {
       ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
+      sending();
+       var data = new FormData(form);
+       ajax(form.method, form.action, data, success, error);
+      error()
     });
   });
   

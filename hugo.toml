@@ -6,6 +6,9 @@ theme = "polish-davmar"
 [params]
   mainphoto = "zboczar.webp"
 
+  [params.formspree]
+    endpoint = "xoqpbzez" # for davmar change to "mnnqyrqr"
+
   # Services
   [params.Services]
     [[params.Services.items]]
