@@ -11,13 +11,14 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .animate-spin {
   animation: spin 1s linear infinite;
   transform-origin: center;
 }
-
-
-
 
 #hero {
   position: relative;
