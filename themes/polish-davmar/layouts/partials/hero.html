@@ -32,43 +32,18 @@
             <!-- right content -->
             <div class="">
   
-              <div class="max-w-sm shadow-xl rounded-lg p-4 md:p-6 flex-col border border-black space-y-4 md:space-y-10 bg-[antiquewhite] text-mateDark opacity-75 mx-auto">
+              <div class="max-w-sm shadow-xl rounded-lg p-4 md:p-6 flex-col border border-black space-y-2 md:space-y-6 bg-[antiquewhite] text-mateDark opacity-75 mx-auto">
                 <!-- top  -->
-                <div class="flex flex-row space-x-4">
-                  <!-- left -->
-                  <div class="flex flex-col items-center">
-                    <div class="overflow-hidden rounded-full w-28 md:w-32 h-28 md:h-32 border-2 border-black">
-                      <img 
-                        class="w-full h-full object-cover transform transition-transform duration-200 hover:scale-110" 
-                        src="images/{{ .Site.Params.Aboutme.photosmall }}" 
-                        alt="profile">
-                    </div>
-                    <h1 class="text-lg">{{ .Site.Params.Aboutme.name }}</h1>
+                <div class="flex flex-col items-center">
+                  <div class="overflow-hidden rounded-full w-28 md:w-32 h-28 md:h-32 border-2 border-black">
+                    <img 
+                      class="w-full h-full object-cover transform transition-transform duration-200 hover:scale-110" 
+                      src="images/{{ .Site.Params.Aboutme.photosmall }}" 
+                      alt="profile">
                   </div>
-                  <!-- right -->
-                  <div class="flex flex-col space-y-4">
-                      
-                    {{ range .Site.Params.Aboutme.headeritem }}
-
-                    <div class="">
-                      <div class="flex items-center space-x-2">
-                        {{ .icon | safeHTML }}
-                        <h2 class="font-bold">       
-                          {{ .item }}
-                        </h2>
-                      </div>
-                        
-                        <!-- bullets qualification -->
-                        <div class="">
-                          {{ range .subitems }}
-                          <p class="text-sm">{{ .subitem }}</p>
-                          {{ end }}
-                        </div>
-                    </div>
-                    {{ end }}
-                  </div>
+                  <h1 class="text-lg">{{ .Site.Params.Aboutme.name }}</h1>
                 </div>
-    
+                 
                 <!-- bottom description-->
                 <p class="text-xs md:text-lg">
                   {{ .Site.Params.Aboutme.description }}
