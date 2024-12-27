@@ -1,5 +1,5 @@
 <section id="contactme" class="p-10 md:p-16 font-parki bg-white">
-    <h1 class="text-4xl text-black font-bold text-center pb-6">Contact Me</h1>
+    <h1 class="text-4xl text-black font-bold text-center pb-6">{{ .Site.Params.Contact.section }}</h1>
 
     <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-6 sm:space-y-0 justify-center">
       <!-- left side -->
@@ -17,7 +17,7 @@
           <!-- Email -->
           <div class="flex flex-col">
             <label for="email">Email</label>
-            <input id="email" required name="_replyto" class="px-4 py-2 rounded-lg border border-orange-400 focus:outline-none" type="email" placeholder="james.hunter@mail.com" required>
+            <input id="email" required name="_replyto" class="px-4 py-2 rounded-lg border border-orange-400 focus:outline-none" type="email" placeholder="james.bond@gmail.com" required>
           </div>
       
           <!-- Phone -->
@@ -42,10 +42,10 @@
       <div class="min-w-2/3 sm:max-w-[30%]">
         <div class="flex flex-col px-4">
           <h1 class="text-2xl font-semibold">
-            I am available
+            {{ .Site.Params.Contact.title }}
           </h1>
           <p class="text-sm sm:leading-6 py-2 mb-4 text-justify">
-            I offer my services to both companies and private individuals. If you have any questions concerning my services, would like to request a free, no-commitment quote or sign up for my courses, feel free to contact me, I’ll be happy to help!
+            {{ .Site.Params.Contact.text }}
           </p>
           <!-- <h1 class="text-2xl font-semibold">
             Have you already tried my services?
@@ -54,10 +54,12 @@
             Your opinion matters! Please use the contact form to share your comments and suggestions, thank you! 
           </p> -->
           <h1 class="text-2xl font-semibold">
-            Contact data
+            {{ .Site.Params.Contact.title2 }}
           </h1>
           <div class="py-2">
-            <a class="text-orange-400 text-sm md:text-lg" href="mailto:info@polishlessonsamsterdam.com?subject=feedback" email="">info@polishlessonsamsterdam.com</a>
+            <a class="text-orange-400 text-sm md:text-lg" href="mailto:{{ .Site.Params.Aboutme.name }}?subject=feedback" email="">
+              {{ .Site.Params.Contact.email }}
+            </a>
             <p class="mt-2">(+31) 0682 773 830</p>
           </div>
         </div>
