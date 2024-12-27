@@ -1,7 +1,0 @@
-{{ define "main" }} <!-- este é o bloco main, que é referenciado no layout baseof.html -->
-  {{ .Content }} <!-- .Content represents the content of the current page (in your case, the content from _index.md or _index.html) -->
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-{{ end }}
